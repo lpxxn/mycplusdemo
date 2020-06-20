@@ -6,20 +6,25 @@ int main() {
     int arr1[] = {1 , 2, 4 ,5};
     int arr1_len = sizeof arr1/sizeof(int);
     std::cout<< "arr1 len: " << arr1_len << std::endl;
+    // 数组名就是第一个元素的地址
+    // arr == &arr[0] // array name is address of first element
+    // 
+    // arr1[i] == *(arr + i)
+    // &arr[i] == arr + i
 
     int int_arr[] = {1, 2, 3};
-    // arr == &arr[0] // array name is address of first element
+    // 
     int int_arr_len = sizeof int_arr/sizeof(int);
     auto total = sum(int_arr, int_arr_len);
     std::cout << "total: " << total << std::endl;
 }
 
-int sum(int arr[], int len) {
-    int total = 0;
-    for (int i = 0; i < len; i++)
-        total += arr[i];
-    return total;
-}
+// int sum(int arr[], int len) {
+//     int total = 0;
+//     for (int i = 0; i < len; i++)
+//         total += arr[i];
+//     return total;
+// }
 
 // 上面和下面是一样，两个同不能同时存在
 int sum(int *arr, int len) {
