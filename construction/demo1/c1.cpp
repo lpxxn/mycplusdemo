@@ -30,9 +30,18 @@ public:
     }
 
     int *ptrInt;
-    int valueInt;   
+    // initialization of non-static data member is a C++11 extension
+    // 类的数据成员在申明时可以直接赋予一个默认值 只有c++11 可以
+    int valueInt = 123;   
+    friend std::ostream & operator<< (std::ostream &s ,const C &c);
 private:         
+    int a =11111;
 };
+
+std::ostream & operator<< (std::ostream &os ,const C &c) {
+    os << "C " <<  c.a << std::endl;
+    return os;
+}
 
 int main() {
     C c1(2);
@@ -48,6 +57,7 @@ int main() {
     std::cout << "c2 ptrInt: " << c2.ptrInt << " value: " << *c2.ptrInt << std::endl;
     std::cout << "c2 valueInt: " << c2.valueInt << std::endl;
     //std::cin.get();
+    std::cout << c1;
     return 0;
 }
 
