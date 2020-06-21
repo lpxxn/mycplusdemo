@@ -42,8 +42,9 @@ int main() {
     std::cout << "c2 ptrInt: " << c2.ptrInt << " value: " << *c2.ptrInt << std::endl;
     std::cout << "c2 valueInt: " << c2.valueInt << std::endl;
     c1.delIntV();
+    // 地址是相同的 
     // delete 后可访问，只是delte分配的空间，但并不修改他的值
-    std::cout << "c1 ptrInt: " << c1.ptrInt << " value: " << *c1.ptrInt << std::endl;
+    // windows 上这个 *c2.ptrInt 是负，不同的编译器，行为不一样
     std::cout << "c2 ptrInt: " << c2.ptrInt << " value: " << *c2.ptrInt << std::endl;
     std::cout << "c2 valueInt: " << c2.valueInt << std::endl;
     //std::cin.get();
