@@ -32,3 +32,7 @@
 *.app
 
 .vscode
+main
+main2
+main.dSYM
+main2.dSYM
