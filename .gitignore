@@ -37,3 +37,5 @@ main
 main2
 main.dSYM
 main2.dSYM
+CMakeLists.txt
+cmake-build-debug
