@@ -1,0 +1,1 @@
+add_executable(static_value main.cpp a.cpp b.cpp)
