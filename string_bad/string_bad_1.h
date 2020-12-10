@@ -15,8 +15,12 @@ private:
 public:
     StringBad1();
     StringBad1(const char *s);
-    friend std::ostream & operator<< (std::ostream &os, const StringBad1 & st);
     static int get_num_strings();
+
+    StringBad1(const StringBad1& s);
+    StringBad1& operator=(const StringBad1 &s);
+
+    friend std::ostream & operator<< (std::ostream &os, const StringBad1 & st);
 
     ~StringBad1();
 };

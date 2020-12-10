@@ -21,6 +21,20 @@ StringBad1::StringBad1() {
     std::cout<< num_strings << ": \"" << str << "\" default object created" << std::endl;
 }
 
+StringBad1::StringBad1(const StringBad1 &s) {
+    *this = s
+}
+
+StringBad1 & StringBad1::operator=(const StringBad1 &s) {
+    if (this == &s) {
+        return *this;
+    }
+    delete str;
+    this->len = s.len;
+    this->str = new char[len + 1];
+    return *this;
+}
+
 std::ostream &operator<<(std::ostream &os, const StringBad1 &st) {
     os << st.str;
     return os;
