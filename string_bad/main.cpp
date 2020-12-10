@@ -20,6 +20,7 @@ int main() {
         callme2(sb1);
         cout << StringBad1::get_num_strings() << endl;
     } // 退出这的时候会报错，因为callme2中的临时变量已经，已经把str指针给释放了。
+    // 所以要加上复制构造函数和=operator
     cout << StringBad1::get_num_strings() << endl;
 
     return 0;
