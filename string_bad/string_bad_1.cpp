@@ -22,7 +22,7 @@ StringBad1::StringBad1() {
 }
 
 StringBad1::StringBad1(const StringBad1 &s) {
-    *this = s
+    *this = s;
 }
 
 StringBad1 & StringBad1::operator=(const StringBad1 &s) {

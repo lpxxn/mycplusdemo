@@ -13,4 +13,6 @@ elseif(COMPILER_SUPPORTS_CXX0X)
 else()
     message(STATUS "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
 endif()
-add_subdirectory(src)
+# add_subdirectory(src)
+# 第二个参数会生成到bin目录
+add_subdirectory(src bin)
