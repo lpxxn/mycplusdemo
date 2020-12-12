@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.17)
 #set(CMAKE_CXX_COMPILER "g++")
 project(http_request VERSION 0.0.1)
 
-#set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 11)
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -c")
 
 add_subdirectory(src)
