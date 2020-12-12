@@ -31,6 +31,7 @@
 *.out
 *.app
 
+.DS_Store
 .vscode
 .idea
 main
@@ -39,4 +40,3 @@ main.dSYM
 main2.dSYM
 build
 cmake-build-debug
-.DS_Store
