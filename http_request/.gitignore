@@ -34,6 +34,7 @@
 .DS_Store
 .vscode
 .idea
+.yaml
 main
 main2
 main.dSYM
