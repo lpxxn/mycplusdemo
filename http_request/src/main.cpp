@@ -37,7 +37,7 @@ int main(int argc, char **argv) {
 }
 
 void parseConfig() {
-    std::__fs::filesystem::path config_path = std::__fs::filesystem::current_path() / "config.yaml";
+    std::filesystem::path config_path = std::__fs::filesystem::current_path() / "config.yaml";
     std::cout << config_path << std::endl;
     YAML::Node config = YAML::LoadFile(config_path);
 
