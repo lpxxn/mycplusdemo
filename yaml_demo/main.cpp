@@ -69,6 +69,7 @@ int main(int argc, char **argv) {
             std::cout << "vector: name: " << it->name << " age: " << it->age << std::endl;
         }
     }
+
     return 0;
 }
 
