@@ -1,4 +1,8 @@
 api: aaaaa
+v: 1
+label:
+  app: hello
+  image: abc
 containers:
   - name: abc
     age: 18
