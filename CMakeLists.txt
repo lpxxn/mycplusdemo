@@ -25,6 +25,7 @@ add_subdirectory(static_value)
 add_subdirectory(string_bad)
 add_subdirectory(string_demo)
 add_subdirectory(yaml_demo)
+add_subdirectory(struct_template)
 #add_executable(mycplusdemo
 #        array_demo1/demo1/main.cpp
 #        array_demo1/demo1/main2.cpp
