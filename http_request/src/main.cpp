@@ -5,17 +5,17 @@
 #include <regex>
 
 #include <restclient-cpp/restclient.h>
-#include <spdlog/sinks/rotating_file_sink.h>
 #include <yaml-cpp/node/parse.h>
 #include <yaml-cpp/yaml.h>
 #include <CLI/CLI11.hpp>
 
+#include "utils/log.h"
+
 void parseConfig();
-std::shared_ptr<spdlog::logger> rotating_example();
 
 int main(int argc, char **argv) {
-    auto log  = rotating_example();
-    log->info("argv[0] %s", argv[0]);
+    auto logger = utils::rotating_example();
+    logger->info("argv[0] {0} {1}", argv[0], "test");
     std::cout << "argv[0]: " << argv[0] << std::endl;
 
     CLI::App app{"App description"};
@@ -53,12 +53,5 @@ void parseConfig() {
     if (config["lastLogin"]) {
         std::cout << "Last logged in: " << config["lastLogin"].as<std::string>() << "\n";
     }
-}
-
-std::shared_ptr<spdlog::logger> rotating_example() {
-    // Create a file rotating logger with 5mb size max and 3 rotated files
-    auto max_size = 1048576 * 5;
-    auto max_files = 3;
-    return spdlog::rotating_logger_mt("log", "logs/rotating.txt", max_size, max_files);
 }
 

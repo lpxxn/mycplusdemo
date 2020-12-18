@@ -13,7 +13,7 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_BINARY_DIR}/bin) # 二进制文件的输出
 link_directories(${PROJECT_SOURCE_DIR}/lib/restclient-cpp)
 link_directories(${PROJECT_SOURCE_DIR}/lib/yaml-cpp)
 link_directories(${PROJECT_SOURCE_DIR}/lib/spdlog)
-add_executable(http_request main.cpp)
+add_executable(http_request main.cpp utils/log.cpp)
 
 #include_directories(/Users/li/Developer/cplus_workspace/http_request/include)
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR}/include)
