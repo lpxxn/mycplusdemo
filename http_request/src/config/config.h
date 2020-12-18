@@ -5,12 +5,21 @@
 #ifndef HTTP_REQUEST_CONFIG_H
 #define HTTP_REQUEST_CONFIG_H
 
+namespace conf {
+    class config {
+    public:
+        config();
+        static *conf globalConfig() {
+            if (config == nullptr) {
 
+            }
+        }
 
-class config {
+    };
 
-};
+private:
+    static *config = nullptr;
 
-
+}
 
 #endif //HTTP_REQUEST_CONFIG_H
