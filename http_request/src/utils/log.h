@@ -9,6 +9,18 @@
 
 namespace utils {
     std::shared_ptr<spdlog::logger> rotating_example();
+
+//    class Logger {
+//    public:
+//        static Logger *Log();
+//
+//    private:
+//        Logger();
+//
+//    private:
+//        static Logger *m_log;
+//        std::shared_ptr<spdlog::logger> real_log;
+//    };
 }
 
 #endif //HTTP_REQUEST_UTILS_LOG_H

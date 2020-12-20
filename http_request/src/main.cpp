@@ -17,6 +17,7 @@ int main(int argc, char **argv) {
     auto logger = utils::rotating_example();
     logger->info("argv[0] {0} {1}", argv[0], "test");
     std::cout << "argv[0]: " << argv[0] << std::endl;
+    utils::rotating_example()->info("hello world!");
 
     CLI::App app{"App description"};
     // Define options
