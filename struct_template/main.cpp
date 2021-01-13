@@ -60,8 +60,8 @@ int main(int argc, char **argv) {
     //label myl;
     MyNode mn1;
 
-    myt<int>::def();
+    bool d = myt<int>::def();
+    std::cout << d << std::endl;
     auto rl = mn1.as<label>();
-    std::cout << rl.app << rl.image << std::endl;
+    std::cout << rl.app << std::endl << rl.image << std::endl;
 }
-
