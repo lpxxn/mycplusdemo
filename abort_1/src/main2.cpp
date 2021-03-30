@@ -14,7 +14,8 @@ int main(){
    signal(SIGINT, signal_callback_handler);
    while(true){
       cout << "Program processing..." << endl;
-      sleep(1);
+      sleep(5);
    }
+   cout <<  "this code unreachable" << endl;
    return EXIT_SUCCESS;
 }
