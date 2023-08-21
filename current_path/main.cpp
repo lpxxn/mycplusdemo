@@ -31,7 +31,10 @@ int main(int argc, char **argv) {
         std::cout << "filesystem::exists" << std::endl;
 
     }
-
+    fork();
+    printf("1");
+    fork();
+    printf("2");
     return 0;
 }
 
